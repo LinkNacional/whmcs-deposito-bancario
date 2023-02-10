@@ -1,0 +1,6 @@
+{
+    "php-cs-fixer.config": ".php-cs-fixer.php;",
+    "intelephense.environment.documentRoot": "src",
+    "intelephense.environment.phpVersion": "8.1.0",
+    "php-cs-fixer.onsave": true
+}

@@ -1,0 +1,26 @@
+{
+    "schema": "1.0",
+    "type": "whmcs-gateways",
+    "name": "lkndepositobancario",
+    "license": "proprietary",
+    "category": "payments",
+    "description": {
+        "name": "Depósito Bancário",
+        "tagline": "Para pagamentos feitos por depósito bancário.",
+        "long": "Exibe dados para o depósito na tela de visualização da fatura.",
+        "features": []
+    },
+    "logo": {
+        "filename": "logo.png"
+    },
+    "support": {
+        "homepage": "https://www.linknacional.com.br/",
+        "email": "ticket@linknacional.com"
+    },
+    "authors": [
+        {
+            "name": "Link Nacional",
+            "homepage": "https://www.linknacional.com.br/"
+        }
+    ]
+}
