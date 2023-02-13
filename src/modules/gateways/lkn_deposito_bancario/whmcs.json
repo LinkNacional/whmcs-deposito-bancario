@@ -1,7 +1,7 @@
 {
     "schema": "1.0",
     "type": "whmcs-gateways",
-    "name": "lkndepositobancario",
+    "name": "lkn_deposito_bancario",
     "license": "proprietary",
     "category": "payments",
     "description": {
