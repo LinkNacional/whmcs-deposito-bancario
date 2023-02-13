@@ -1,2 +1,2 @@
-# 2.4.2
-* Melhorias de segurança no arquivo actions.php
+# 1.0.0
+- Primeira versão
