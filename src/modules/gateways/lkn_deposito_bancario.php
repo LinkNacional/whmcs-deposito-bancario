@@ -45,7 +45,7 @@ function lkn_deposito_bancario_config()
         ],
 
         'holder' => [
-            'FriendlyName' => 'Titular',
+            'FriendlyName' => 'Favorecido',
             'Description' => '',
             'Type' => 'text',
             'Size' => '25',
@@ -63,6 +63,13 @@ function lkn_deposito_bancario_config()
             'Description' => '',
             'Type' => 'text',
             'Size' => '25',
+        ],
+
+        'footnote' => [
+            'FriendlyName' => 'Observação',
+            'Description' => '',
+            'Type' => 'text',
+            'Size' => '255',
         ]
     ];
 }
@@ -76,18 +83,23 @@ function lkn_deposito_bancario_config()
  */
 function lkn_deposito_bancario_link($params)
 {
-    $cnpj = $params['cnpj'];
-    $bank = $params['bank'];
-    $holder = $params['holder'];
-    $agencyNumber = $params['agency_number'];
-    $accountNumber = $params['account_number'];
+    $gatewayName = $params['name'];
+    $cnpj = $params['cnpj'] ?? '';
+    $bank = $params['bank'] ?? '';
+    $holder = $params['holder'] ?? '';
+    $agencyNumber = $params['agency_number'] ?? '';
+    $accountNumber = $params['account_number'] ?? '';
+    $accountNumber = $params['account_number'] ?? '';
+    $footnote = $params['footnote'] ?? '';
 
     $smarty = new Smarty();
+    $smarty->assign('gatewayName', $gatewayName);
     $smarty->assign('cnpj', $cnpj);
     $smarty->assign('bank', $bank);
     $smarty->assign('holder', $holder);
     $smarty->assign('agencyNumber', $agencyNumber);
     $smarty->assign('accountNumber', $accountNumber);
+    $smarty->assign('footnote', $footnote);
 
     return $smarty->fetch(__DIR__ . '/lkn_deposito_bancario/templates/deposit_data_display.tpl');
 }
